@@ -319,7 +319,7 @@
       startEditing(task);
     } else if (button.getAttribute("data-action") === "delete") { // Delete Button
       if (filterSelect.value !== "All") {
-        tasks.splice(tasks.indexOf(task), 1);
+        tasks.splice(tasks.indexOf(task), 1); //problem 4
       } else {
         tasks = tasks.filter(function (t) { return t.id !== task.id; });
       }
