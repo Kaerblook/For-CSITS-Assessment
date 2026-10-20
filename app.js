@@ -317,9 +317,9 @@
 
     if (button.getAttribute("data-action") === "edit") {
       startEditing(task);
-    } else if (button.getAttribute("data-action") === "delete") {
+    } else if (button.getAttribute("data-action") === "delete") { // Delete Button
       if (filterSelect.value !== "All") {
-        tasks.splice(visibleTasks().indexOf(task), 1);
+        tasks.splice(tasks.indexOf(task), 1);
       } else {
         tasks = tasks.filter(function (t) { return t.id !== task.id; });
       }
